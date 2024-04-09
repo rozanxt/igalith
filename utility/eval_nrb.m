@@ -1,0 +1,6 @@
+% Evaluate a NURBS surface at uniform grid points
+function pts = eval_nrb(nrb, sub)
+    pts = nrbeval(nrb, ...
+         {linspace(nrb.knots{1}(nrb.order(1)), nrb.knots{1}(end - nrb.order(1) + 1), sub(1)), ...
+          linspace(nrb.knots{2}(nrb.order(2)), nrb.knots{2}(end - nrb.order(2) + 1), sub(2))});
+end
