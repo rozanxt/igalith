@@ -24,7 +24,6 @@ prb.dp = -prb.cr * prb.rt; % initial depth for the mid-surface of the lithospher
 
 prb.em = @(x, y, z) prb.em * ones(size(x));
 prb.nu = @(x, y, z) prb.nu * ones(size(x));
-prb.th = @(x, y, z) prb.th * ones(size(x));
 
 prb.rd = @(x, y, z) sqrt(x.^2 + y.^2 + z.^2); % radial distance in ul
 prb.sr = @(x, y, z) prb.ul * (prb.rd(x, y, z) - 1); % radial displacement in km
